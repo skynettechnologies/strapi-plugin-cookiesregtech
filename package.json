@@ -1,0 +1,69 @@
+{
+  "name": "strapi-plugin-cookiesregtech",
+  "version": "1.0.0",
+  "description": "CookiesRegTech cookie consent: guided connect from the Strapi admin, plus the config endpoint and snippet for the site frontend.",
+  "license": "MIT",
+  "author": {
+    "name": "SKYNET TECHNOLOGIES USA LLC",
+    "url": "https://www.skynettechnologies.com"
+  },
+  "keywords": [
+    "strapi",
+    "plugin",
+    "cookie-consent",
+    "gdpr",
+    "ccpa"
+  ],
+  "strapi": {
+    "name": "cookiesregtech",
+    "displayName": "CookiesRegTech",
+    "description": "Cookie consent banner with automatic tracker blocking, Google Consent Mode, cookie scanner, and consent log.",
+    "kind": "plugin"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.js",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "source": "./server/src/index.js",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^6.1.1",
+    "@strapi/strapi": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.6.8",
+    "react-router-dom": "^6.26.0",
+    "styled-components": "^6.1.13",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "commonjs"
+}
